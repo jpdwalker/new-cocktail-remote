@@ -1,0 +1,19 @@
+.navbar {
+  text-align: center;
+  justify-content: center;
+  background-color: transparent;
+  border-bottom: 1px solid #AC7A3E;
+  color: white;
+    .navbar-brand {
+      color: #AC7A3E;
+    }
+}
+
+.navbar-joe {
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-joe-white {
+  background-color: white;
+}
