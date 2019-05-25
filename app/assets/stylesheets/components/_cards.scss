@@ -41,3 +41,35 @@
     color: black;
   }
 }
+
+.image-card {
+  justify-content: center;
+}
+
+.description-card {
+  border: 1px solid black;
+  width: 33%;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.socials-card {
+    background-color: transparent;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin: 20px 0px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.list-inline {
+    list-style: none;
+    padding-left: 0px;
+    ul {
+    display: block;
+    list-style-type: disc;
+    }
+}

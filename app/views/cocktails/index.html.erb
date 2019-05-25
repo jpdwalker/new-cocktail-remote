@@ -1,31 +1,39 @@
 <%= render 'shared/navbar' %>
-
 <div class="home-banner">
   <h1>Welcome to Joe's</h1>
   <h3>The world's best cocktails</h3>
 </div>
 <div class="container">
-<h1>Drinks menu</h1>
-
-<div class="cards">
-    <% @cocktails.each do |cocktail| %>
-
-    <%= link_to cocktail_path(cocktail) do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo %>')">
-        <%= cocktail.name %>
+  <div class="accordion" id="drinksAccordian">
+    <div id="headingOne">
+      <button class="btn btn-link btn-outline-secondary" type="button" data-toggle="collapse"   data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Drinks Menu</button>
+    </div>
+    <div class="cards collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#drinksAccordian">
+      <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo %>')">
+      <%= cocktail.name %>
         <div id="delete-btn">
           <object data="" type="">
-          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure you want to delete this cocktail?" } do %>
+            <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure you want to delete this cocktail?" } do %>
               <i class="fas fa-times" id="cross"></i>
-          <% end %>
+            <% end %>
           </object>
         </div>
       </div>
-    <% end %>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
 
-  <% end %>
+      <%= link_to 'Add new cocktail', new_cocktail_path, class: "btn btn-primary" %>
+
+  <div class="socials-card">
+    <h2>Follow us</h2>
+    <ul class="list-inline">
+      <li><a href="#"><i class="fab fa-github"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
 </div>
-
-<%= link_to 'Add new cocktail', new_cocktail_path %>
-
-

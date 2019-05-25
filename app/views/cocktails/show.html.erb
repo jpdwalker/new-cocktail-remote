@@ -1,28 +1,25 @@
+<%= render 'shared/navbar' %>
+<p id="notice"><%= notice %></p>
 <div class="container">
-  <p id="notice"><%= notice %></p>
-  <div class="d-flex display-inline-block">
+  <h2><%= @cocktail.name %></h2>
+  <div class="image-card d-flex display-inline-block col-xs-6 p-3">
     <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
   </div>
-
-  <div class="d-flex display-inline-block">
-  <ul class="justify-content-center">
-    <% @doses.each do |dose| %>
-      <li>
-        <%= @cocktail.name %>
-        <br>
-        <%= dose.description %>
-        <br>
+    <h1>What's in it</h1>
+  <div class="description-card justify-content-center d-flex display-inline-block col-xs-6">
+      <% @doses.each do |dose| %>
         <%= dose.ingredient.name %>
-        <br>
+        <%= dose.description %>
+      <br>
         <%= link_to "delete", dose_path(dose),
         method: :delete,
         data: { confirm: "Are you sure you want to delete this dose?" }  %>
-      </li>
     <% end %>
-  </ul>
   </div>
-
-  <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
+    <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
   <br>
-  <%= link_to 'Back', cocktails_path  %>
+    <%= link_to 'Back', cocktails_path  %>
+  </div>
 </div>
+</div>
+
