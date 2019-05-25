@@ -68,6 +68,15 @@
 .list-inline {
     list-style: none;
     padding-left: 0px;
+    font-size: 25px;
+    color: #AC7A3E;
+    a {
+      color: #AC7A3E;
+      &:hover {
+        color: black;
+
+      }
+    }
     ul {
     display: block;
     list-style-type: disc;
