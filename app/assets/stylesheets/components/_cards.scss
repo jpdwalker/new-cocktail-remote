@@ -42,14 +42,9 @@
   }
 }
 
-.image-card {
-  justify-content: center;
-}
-
 .description-card {
   border: 1px solid black;
-  width: 33%;
-  justify-content: center;
+  justify-content: right;
   text-align: center;
   border-radius: 10px;
   padding: 20px;
@@ -57,12 +52,16 @@
 
 .socials-card {
     background-color: transparent;
-    padding: 40px;
+    padding: 20px;
     box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
     border-radius: 4px;
     margin: 20px 0px;
     text-align: center;
     margin: 20px auto;
+    margin-top: 70px;
+    h2  {
+      color: #AC7A3E;
+    }
 }
 
 .list-inline {
@@ -70,10 +69,15 @@
     padding-left: 0px;
     font-size: 25px;
     color: #AC7A3E;
+    display: flex;
+    justify-content: center;
     a {
       color: #AC7A3E;
+      padding: 10px;
       &:hover {
         color: black;
+        transform: scale(2, 3);
+        transition: 0.5s;
 
       }
     }

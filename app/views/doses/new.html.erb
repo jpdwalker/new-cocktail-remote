@@ -1,10 +1,12 @@
 <div class="container">
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <div>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
     <%= f.input :ingredient, as: :select, collection: Ingredient.all %>
     <%= f.submit "Add dose", class: "btn btn-primary" %>
-  <% end %>
+    <% end %>
 
-  <%= link_to 'Back', cocktail_path(@cocktail)  %>
-  <%= link_to 'Home', cocktails_path %>
+    <%= link_to 'Back', cocktail_path(@cocktail), class: "btn btn-outline-secondary"  %>
+    <%= link_to 'Home', cocktails_path, class: "btn btn-outline-secondary"  %>
+  </div>
 </div>

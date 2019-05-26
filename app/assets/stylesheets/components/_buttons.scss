@@ -5,6 +5,21 @@
 
 .btn-primary {
   background-color: #AC7A3E !important;
-  border-color: #AC7A3E
+  border-color: #AC7A3E;
+  text-decoration: none;
+  &:hover {
+    border-color: #AC7A3E;
+  }
+
 }
 
+.btn-outline-secondary {
+  color: black;
+  &:hover {
+    background-color: #AC7A3E;
+    color: white;
+    text-decoration: none;
+    transition: 0.8s;
+    border-color: #AC7A3E;
+  }
+}
