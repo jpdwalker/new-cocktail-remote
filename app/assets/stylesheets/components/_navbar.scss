@@ -1,9 +1,11 @@
 .navbar {
-  text-align: center;
-  justify-content: center;
+  text-align: left;
+  justify-content: left;
   background-color: transparent;
   border-bottom: 1px solid #AC7A3E;
   color: white;
+  position: sticky;
+  top: 0;
     .navbar-brand {
       color: #AC7A3E;
     }
