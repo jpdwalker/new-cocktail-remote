@@ -1,11 +1,11 @@
 <div class="container">
   <div class="card mt-3 py-4 px-5">
     <%= simple_form_for [@cocktail] do |f| %>
-      <%= f.input :name %>
-      <%= f.input :photo %>
+      <%= f.input :name%>
+      <%= f.input :photo, :label => "Add a photo" %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit "Add cocktail", class: "btn btn-primary"%>
-    <%= link_to "Back", cocktails_path, class: "btn btn-outline-secondary"%>
+      <%= link_to "Back", cocktails_path, class: "btn btn-outline-secondary"%>
     <% end %>
   </div>
 </div>

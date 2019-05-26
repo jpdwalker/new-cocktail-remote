@@ -7,12 +7,12 @@
   <div class="container">
     <div class="accordion" id="drinksAccordian">
       <div id="headingOne">
-        <button class="btn btn-link btn-outline-secondary" type="button" data-toggle="collapse"   data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Drinks Menu</button>
+        <button class="btn btn-lg btn-link btn-outline-secondary" type="button" data-toggle="collapse"   data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Drinks Menu</button>
       </div>
       <div class="cards collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#drinksAccordian">
         <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail_path(cocktail) do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo %>')">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path cocktail.photo %>')">
         <%= cocktail.name %>
           <div id="delete-btn">
             <object data="" type="">
